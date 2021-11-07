@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterpoc/credit_cards/credit_cards_page.dart';
+import 'package:flutterpoc/charts/charts_page.dart';
 
 
 void main() {
@@ -56,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
               title: "Dirigir a Tarjetas",
               actionTap: () {
                 onButtonTap(
-                  CreditCardConceptPage(),
+                  ChartsPage(),
                 );
               },
             ),
