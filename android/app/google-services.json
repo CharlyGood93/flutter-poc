@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1019699118577",
+    "project_id": "fluteritos-e496d",
+    "storage_bucket": "fluteritos-e496d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019699118577:android:327bf57a75f2d814f70450",
+        "android_client_info": {
+          "package_name": "com.example.flutterpoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019699118577-ntnll2ppgim4erlal30ga3pq7cqlnr0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRLyAp6KVzc5n8YEaZZW_gbJWrRfTiCS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019699118577-ntnll2ppgim4erlal30ga3pq7cqlnr0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
