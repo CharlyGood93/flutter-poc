@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutterpoc/credit_cards/credit_cards_page.dart';
+import 'package:flutterpoc/biometric-authentication/page/fingerprint_page.dart';
 
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
 
-void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+  static const String title = 'Flutterito´s';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,10 +38,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-    onButtonTap(Widget page) {
+  onButtonTap(Widget page) {
     Navigator.push(
         context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
+
   int _counter = 0;
 
   void _incrementCounter() {
@@ -53,10 +62,18 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           children: <Widget>[
             MyMenuButton(
-              title: "Dirigir a Tarjetas",
+              title: "Dirigir a Tarjetas.",
               actionTap: () {
                 onButtonTap(
                   CreditCardConceptPage(),
+                );
+              },
+            ),
+            MyMenuButton(
+              title: "Autenticación Biométrica.",
+              actionTap: () {
+                onButtonTap(
+                  FingerprintPage(),
                 );
               },
             ),
