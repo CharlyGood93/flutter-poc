@@ -1,10 +1,18 @@
 import 'package:flutterpoc/main.dart';
 import 'package:flutterpoc/biometric-authentication/page/fingerprint_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterpoc/services/data_service.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
+
+
   @override
-  Widget build(BuildContext context) => Scaffold(
+  Widget build(BuildContext context) {
+
+  final dataService = Provider.of<DataService>(context);
+
+    return Scaffold(
         appBar: AppBar(
           title: Text(MyApp.title),
         ),
@@ -25,6 +33,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       );
+  }
 
   Widget buildLogoutButton(BuildContext context) => ElevatedButton(
         style: ElevatedButton.styleFrom(

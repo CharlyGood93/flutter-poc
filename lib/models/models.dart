@@ -1,0 +1,1 @@
+export 'package:flutterpoc/models/data.dart';

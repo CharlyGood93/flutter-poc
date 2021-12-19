@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutterpoc/credit_cards/credit_cards_page.dart';
 import 'package:flutterpoc/biometric-authentication/page/fingerprint_page.dart';
+import 'package:flutterpoc/services/data_service.dart';
+
+import 'package:provider/provider.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,7 +13,7 @@ Future main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  runApp(MyApp());
+  runApp(DataState());
 }
 
 class MyApp extends StatelessWidget {
@@ -101,6 +104,20 @@ class MyMenuButton extends StatelessWidget {
         child: new Text(title!),
         onPressed: actionTap,
       ),
+    );
+  }
+}
+
+class DataState extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => DataService(),
+        )
+      ],
+      child: MyApp(),
     );
   }
 }
