@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutterpoc/credit_cards/credit_cards_page.dart';
 import 'package:flutterpoc/biometric-authentication/page/fingerprint_page.dart';
+import 'package:flutterpoc/charts/charts_page.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -73,6 +74,14 @@ class _MyHomePageState extends State<MyHomePage> {
               actionTap: () {
                 onButtonTap(
                   FingerprintPage(),
+                );
+              },
+            ),
+            MyMenuButton(
+              title: "Ver gráficos.",
+              actionTap: () {
+                onButtonTap(
+                  ChartsPage()
                 );
               },
             ),
