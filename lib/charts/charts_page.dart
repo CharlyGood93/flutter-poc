@@ -6,20 +6,20 @@ import 'package:flutterpoc/charts/charts_data.dart';
 class ChartsPage extends StatelessWidget {
   final List<ChartsData> data = [
     ChartsData(
+        ammount: 550000,
+        year: '2017',
+        barColor: charts.ColorUtil.fromDartColor(Colors.orange)),
+    ChartsData(
         ammount: 50000,
-        year: '2020',
-        barColor: charts.ColorUtil.fromDartColor(Colors.orange)),
-    ChartsData(
-        ammount: 10000,
-        year: '2020',
-        barColor: charts.ColorUtil.fromDartColor(Colors.orange)),
-    ChartsData(
-        ammount: 8000,
-        year: '2020',
+        year: '2018',
         barColor: charts.ColorUtil.fromDartColor(Colors.orange)),
     ChartsData(
         ammount: 150000,
-        year: '2021',
+        year: '2019',
+        barColor: charts.ColorUtil.fromDartColor(Colors.orange)),
+    ChartsData(
+        ammount: 250000,
+        year: '2020',
         barColor: charts.ColorUtil.fromDartColor(Colors.orange)),
     ChartsData(
         ammount: 350000,
