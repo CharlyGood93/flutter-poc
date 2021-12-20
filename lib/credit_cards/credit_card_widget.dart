@@ -162,6 +162,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
                                 Row(
                                   children: [
                                     Expanded(
+                  
                                       child: Text(
                                         'Credit Card',
                                         style: TextStyle(
@@ -170,6 +171,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
                                           color: Colors.white,
                                         ),
                                       ),
+                                      
                                     ),
                                     RotatedBox(
                                       quarterTurns: 1,
@@ -245,7 +247,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
                                             height: 5,
                                           ),
                                           Text(
-                                            'Diegoveloper',
+                                            'BECH',
                                             style: TextStyle(
                                               fontSize: 14,
                                               color: Colors.white,

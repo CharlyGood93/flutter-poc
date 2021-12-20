@@ -14,8 +14,10 @@ class CreditCard {
     this.ccv,
     this.amount,
   });
+
 }
 
+const colores = [7, 2, 3];
 final Random random = new Random();
 
 double doubleInRange(Random source, int start, int end) =>
@@ -27,11 +29,11 @@ int _intInRange(Random source, int start, int end) =>
 String _getFourNumbers() => _intInRange(random, 1000, 9999).toString();
 
 final creditCards = List.generate(
-  20,
+  3,
   (index) => CreditCard(
     amount: doubleInRange(random, 500, 20000),
     ccv: _getFourNumbers(),
-    color: Colors.primaries[index % Colors.primaries.length],
+    color: Colors.deepOrange[600],
     number:
         "${_getFourNumbers()} ${_getFourNumbers()} ${_getFourNumbers()} ${_getFourNumbers()}",
   ),
